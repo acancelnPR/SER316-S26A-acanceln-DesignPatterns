@@ -72,6 +72,8 @@
 
 \- \*\* Any concerns or open questions about your approach \*\*:
 
+\_What is the best way to start this?\_
+
 
 
 \## References:
@@ -82,7 +84,7 @@
 
 
 
-\[refactoring guru](https://refactoring.guru/) - \_useful pattern design website that displays many design example.\_
+\[refactoring guru](https://refactoring.guru/) - \_useful pattern design website that displays many design examples.\_
 
 
 
