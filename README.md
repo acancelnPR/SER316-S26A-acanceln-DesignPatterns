@@ -1,18 +1,18 @@
-\#SER316-S26A-acanceln-DesignPatterns
+# SER316-S26A-acanceln-DesignPatterns
 
 
 
-\#### Project Overview:
+#### Project Overview:
 
 \- \*\* Brief description of your chosen domain (Pet Shelter) \*\*: 
 
 \_My domain, Pet Shelter, features a pet shelter management application. This app will be able to store animals and staff from the shelter, and control the various states they are in.\_
 
- 
 
 
 
-\#### Planned Design Patterns:
+
+#### Planned Design Patterns:
 
 \- \*\* Which two design patterns you plan to implement and why \*\*:
 
@@ -22,11 +22,10 @@
 
 \_State will allow a clean switch between the states an object would be in. EX: animal is available, or is injured.\_
 
- 
 
 
 
-\#### Integration Strategy
+#### Integration Strategy
 
 \- \*\* High-level explanation of how you envision these patterns working together \*\*:
 
