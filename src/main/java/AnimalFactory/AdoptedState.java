@@ -14,6 +14,6 @@ public class AdoptedState implements AnimalState{
      */
     @Override
     public void nextState(Animal animal) {
-        throw new IllegalStateException("Cannot change");
+        throw new IllegalStateException("Once adopted, animal does not change states");
     }
 }
