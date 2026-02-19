@@ -1,7 +1,7 @@
 package AnimalFactory;
 
 /**
- * Health status
+ * Health status: HEALTHY, SICK
  */
 public enum HealthStatus {
     HEALTHY, SICK;
