@@ -1,20 +1,19 @@
 package AnimalFactory;
 
-public class Animal {
+abstract public class Animal {
 
      private final int ID;
      private final int AGE;
      private String name;
      private final AnimalSpecies species;
      private HealthStatus healthStatus;
-     private AnimalState shelterState;
+     private AnimalState shelterState;//TODO maybe I should have protected visibility? Revisit.
 
      public Animal(int id, int age, AnimalSpecies species, HealthStatus healthStatus) {
          ID = id;
          AGE = age;
          this.species = species;
          this.healthStatus = healthStatus;
-         shelterState = new IntakeState();
      }
 
      public int getID() {
@@ -35,11 +34,15 @@ public class Animal {
 
     /**
      * get animal species
-     * @param species AnimalSpecies
      * @return AnimalSpecies
      */
-     public AnimalSpecies getSpecies(AnimalSpecies species) {
+     public AnimalSpecies getSpecies() {
         return species;
+     }
+
+     /// get shelter state of the animal
+     public String getShelterState(){
+         return shelterState.stateName();
      }
 
     /**
@@ -65,5 +68,23 @@ public class Animal {
     void setShelterState(AnimalState state){
          shelterState = state;
     }
+
+    //TODO create various methods for state design to interact with
+
+    /**
+     * perform sad action.
+     */
+    abstract void sadAction();
+
+    /// Generic indifferent action
+    public void indifferentAction(){
+        System.out.printf("%s the %s is in the %s and acts indifferent.\n",
+                name, species.name(), shelterState.stateName());
+    }
+
+    /**
+     * perform happy action.
+     */
+    abstract void happyAction();
 
 }
