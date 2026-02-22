@@ -5,7 +5,7 @@ import AnimalFactory.IntakeState;
 
 import java.util.HashMap;
 
-
+//TODO create staff factory
 abstract public class Staff {
 
     private final int ID;
@@ -18,10 +18,12 @@ abstract public class Staff {
 
 
 
-    public Staff(int id, StaffRole role) {
+    public Staff(int id, StaffRole role, String name) {
         ID = id;
         ROLE = role;
+        this.name = name;
     }
+
     //GETTERS
     public int getID() {
         return ID;
@@ -84,7 +86,7 @@ abstract public class Staff {
     }
 
     /**
-     * Each staff ahs a different action. Interact with animal and change their state.
+     * Each staff has a different action. Interact with animal and/or change their state.
      */
     abstract void staffAction();
 }
