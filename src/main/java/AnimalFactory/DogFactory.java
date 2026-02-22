@@ -8,7 +8,7 @@ public class DogFactory extends AnimalFactory{
      * @return Animal
      */
     @Override
-    Animal createAnimal() {
+    public Animal createAnimal() {
         int id = getId();
         int age = getAge();
         HealthStatus health = getHealthStatus();

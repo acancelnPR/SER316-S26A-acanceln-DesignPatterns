@@ -21,7 +21,7 @@ abstract public class AnimalFactory {
      * Create object from the Animal class
      * @return Animal
      */
-    abstract Animal createAnimal();
+    abstract public Animal createAnimal();
 
     /// Get id
     protected int getId(){return id;}
