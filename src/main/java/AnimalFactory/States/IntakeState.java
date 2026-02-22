@@ -20,14 +20,14 @@ public class IntakeState implements AnimalState{
      */
     @Override
     public void nextState(Animal animal) {
+        animal.setShelterState(new AvailableState());
+
         HealthStatus health = animal.getHealthStatus();
         if (health.equals(HealthStatus.SICK)){
             animal.sadAction();
         } else if (health == HealthStatus.HEALTHY) {
             animal.indifferentAction();
         }
-
-        animal.setShelterState(new AvailableState());
     }
 
     //TODO doaction()? if health is sick then display sadaction() else neutral action.

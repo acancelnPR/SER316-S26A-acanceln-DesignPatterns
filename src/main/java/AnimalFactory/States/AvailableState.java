@@ -21,10 +21,8 @@ public class AvailableState implements AnimalState{
     @Override
     public void nextState(Animal animal) {
 
-        animal.specialAction();
-
-
-
         animal.setShelterState(new PendingState());
+
+        animal.specialAction();
     }
 }

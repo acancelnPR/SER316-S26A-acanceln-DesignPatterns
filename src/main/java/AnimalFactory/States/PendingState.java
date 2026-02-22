@@ -18,8 +18,8 @@ public class PendingState implements AnimalState{
     @Override
     public void nextState(Animal animal) {
 
-        animal.happyAction();
-
         animal.setShelterState(new AdoptedState());
+
+        animal.happyAction();
     }
 }
