@@ -1,4 +1,7 @@
-package AnimalFactory;
+package AnimalFactory.States;
+
+import AnimalFactory.Animal;
+import AnimalFactory.HealthStatus;
 
 /**
  * Intake state: Animals in the Intake State have just arrived

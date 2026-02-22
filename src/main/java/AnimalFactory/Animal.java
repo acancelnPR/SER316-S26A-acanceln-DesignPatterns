@@ -1,5 +1,7 @@
 package AnimalFactory;
 
+import AnimalFactory.States.AnimalState;
+
 /**
  * template for Animal object in the shelter simulation
  */
@@ -68,21 +70,19 @@ abstract public class Animal {
      *
      * @param state AnimalState
      */
-    void setShelterState(AnimalState state){
+    public void setShelterState(AnimalState state){
          shelterState = state;
     }
 
     /**
      * Sets the next state automatically according to the order Intake -> Available -> Pending -> Adopted
      */
-    void nextShelterState(){shelterState.nextState(this);}
-
-    //TODO create various methods for state design to interact with
+    public void nextShelterState(){shelterState.nextState(this);}
 
     /**
      * perform sad action.
      */
-    abstract void sadAction();
+    public abstract void sadAction();
 
     /// Generic indifferent action
     public void indifferentAction(){
@@ -93,11 +93,11 @@ abstract public class Animal {
     /**
      * perform unique animal action.
      */
-    abstract void specialAction();
+    public abstract void specialAction();
 
     /**
      * perform happy action.
      */
-    abstract void happyAction();
+    public abstract void happyAction();
 
 }

@@ -10,7 +10,7 @@ public class Turtle extends Animal{
      * perform sad action.
      */
     @Override
-    void sadAction() {
+    public void sadAction() {
         System.out.printf("%s the %s is in the %s and does \"turtle\" stuff sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
@@ -19,7 +19,7 @@ public class Turtle extends Animal{
      * perform unique animal action.
      */
     @Override
-    void specialAction() {
+    public void specialAction() {
         System.out.printf("%s the %s is in the %s and hides its limbs inside the shell.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
@@ -28,7 +28,7 @@ public class Turtle extends Animal{
      * perform happy action.
      */
     @Override
-    void happyAction() {
+    public void happyAction() {
         System.out.printf("%s the %s is in the %s and does \"turtle\" stuff Excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
     }

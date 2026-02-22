@@ -1,4 +1,6 @@
-package AnimalFactory;
+package AnimalFactory.States;
+
+import AnimalFactory.Animal;
 
 /**
  * Available State: Animal in the available state is free to all adopters to inspect,

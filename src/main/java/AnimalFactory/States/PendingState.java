@@ -1,4 +1,6 @@
-package AnimalFactory;
+package AnimalFactory.States;
+
+import AnimalFactory.Animal;
 
 public class PendingState implements AnimalState{
 
