@@ -13,11 +13,16 @@ public class AvailableState implements AnimalState{
     }
 
     /**
-     * transitions the animal to the next state.
+     * animal does an action and then transitions to the next state.
      * @param animal
      */
     @Override
     public void nextState(Animal animal) {
+
+        animal.specialAction();
+
+
+
         animal.setShelterState(new PendingState());
     }
 }

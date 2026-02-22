@@ -10,5 +10,5 @@ interface AnimalState {
      * transitions the animal to the next state.
      * @param animal
      */
-    public void nextState(Animal animal);
+    void nextState(Animal animal);
 }

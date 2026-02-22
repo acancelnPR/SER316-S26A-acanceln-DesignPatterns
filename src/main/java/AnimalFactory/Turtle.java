@@ -1,8 +1,8 @@
 package AnimalFactory;
 
-public class Dog extends Animal{
+public class Turtle extends Animal{
 
-    public Dog(int id, int age, AnimalSpecies species, HealthStatus healthStatus) {
+    public Turtle(int id, int age, AnimalSpecies species, HealthStatus healthStatus) {
         super(id, age, species, healthStatus);
     }
 
@@ -11,7 +11,7 @@ public class Dog extends Animal{
      */
     @Override
     void sadAction() {
-        System.out.printf("%s the %s is in the %s and \"Ruffs\" sadly.\n",
+        System.out.printf("%s the %s is in the %s and does \"turtle\" stuff sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -20,7 +20,7 @@ public class Dog extends Animal{
      */
     @Override
     void specialAction() {
-        System.out.printf("%s the %s is in the %s and is wagging its tail.\n",
+        System.out.printf("%s the %s is in the %s and hides its limbs inside the shell.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -29,7 +29,7 @@ public class Dog extends Animal{
      */
     @Override
     void happyAction() {
-        System.out.printf("%s the %s is in the %s and \"Woofs\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s and does \"turtle\" stuff Excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 }

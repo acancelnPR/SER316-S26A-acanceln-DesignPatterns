@@ -1,5 +1,8 @@
 package AnimalFactory;
 
+/**
+ * template for Animal object in the shelter simulation
+ */
 abstract public class Animal {
 
      private final int ID;
@@ -69,6 +72,11 @@ abstract public class Animal {
          shelterState = state;
     }
 
+    /**
+     * Sets the next state automatically according to the order Intake -> Available -> Pending -> Adopted
+     */
+    void nextShelterState(){shelterState.nextState(this);}
+
     //TODO create various methods for state design to interact with
 
     /**
@@ -81,6 +89,11 @@ abstract public class Animal {
         System.out.printf("%s the %s is in the %s and acts indifferent.\n",
                 name, species.name(), shelterState.stateName());
     }
+
+    /**
+     * perform unique animal action.
+     */
+    abstract void specialAction();
 
     /**
      * perform happy action.

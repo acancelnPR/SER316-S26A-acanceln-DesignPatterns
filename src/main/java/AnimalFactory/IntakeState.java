@@ -12,11 +12,20 @@ public class IntakeState implements AnimalState{
     }
 
     /**
-     * transitions the animal to the next state.
+     * animal does an action and then transitions to the next state.
      * @param animal
      */
     @Override
     public void nextState(Animal animal) {
+        HealthStatus health = animal.getHealthStatus();
+        if (health.equals(HealthStatus.SICK)){
+            animal.sadAction();
+        } else if (health == HealthStatus.HEALTHY) {
+            animal.indifferentAction();
+        }
+
         animal.setShelterState(new AvailableState());
     }
+
+    //TODO doaction()? if health is sick then display sadaction() else neutral action.
 }
