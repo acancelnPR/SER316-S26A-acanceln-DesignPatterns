@@ -71,7 +71,9 @@ abstract public class Staff {
         if (size <= ANIMALCAPACITY){
             assignedAnimals.add(animal);
         }
-        System.out.println("Animal Capacity is full. Remove animal to create space.");
+        else{
+            System.out.println("Animal Capacity is full. Remove animal to create space.");
+        }
     }
 
     /**

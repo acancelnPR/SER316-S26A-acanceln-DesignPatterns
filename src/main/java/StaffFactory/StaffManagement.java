@@ -18,10 +18,10 @@ public class StaffManagement {
      * @param counselor
      * @param technician
      */
-    public StaffManagement(Staff veterinarian, Staff counselor, Staff technician){
+    public StaffManagement(Staff technician, Staff veterinarian, Staff counselor){
+        activeTechnician = technician;
         activeVeterinarian = veterinarian;
         activeCounselor = counselor;
-        activeTechnician = technician;
     }
 
     /// Adds staff to staff list

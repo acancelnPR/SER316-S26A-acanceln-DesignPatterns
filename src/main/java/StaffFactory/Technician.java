@@ -48,7 +48,12 @@ public class Technician extends Staff{
         Staff vet = management.getActiveVeterinarian();
         Staff counselor = management.getActiveCounselor();
 
-        System.out.println("//////////Technician Working//////////");
+        System.out.println("\n//////////Technician Working//////////\n");
+
+        if (size == 0){
+            System.out.println("Technician does not have any animals to work with. Shift ends early.\n");
+            return;
+        }
 
         //decrementing to accommodate for arraylist's remove shift functionality.
         for (int i = size - 1; i >= 0; i--) {

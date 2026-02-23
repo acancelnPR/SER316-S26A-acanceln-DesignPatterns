@@ -12,6 +12,6 @@ public class TechnicianFactory extends StaffFactory {
         int id = getId();
         String name = getRandomName();
 
-        return new Veterinarian(id, StaffRole.TECHNICIAN, name);
+        return new Technician(id, StaffRole.TECHNICIAN, name);
     }
 }

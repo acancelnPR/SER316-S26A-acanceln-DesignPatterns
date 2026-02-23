@@ -1,7 +1,7 @@
 package StaffFactory;
 
 import AnimalFactory.Animal;
-import AnimalFactory.HealthStatus;
+
 
 /**
  * Create a Counselor.
@@ -29,7 +29,12 @@ public class Counselor extends Staff{
 
 
 
-        System.out.println("//////////Counselor Working//////////");
+        System.out.println("\n//////////Counselor Working//////////\n");
+
+        if (size == 0){
+            System.out.println("Counselor does not have any animals to work with. Shift ends early.\n");
+            return;
+        }
 
         //decrementing to accommodate for arraylist's remove shift functionality.
         for (int i = size - 1; i >= 0; i--) {
@@ -50,7 +55,6 @@ public class Counselor extends Staff{
                 animal.nextShelterState();
 
                 System.out.printf("%s, the %s on duty guides %s the %s through the adoption process.\n", name, role, animalName, animalSpecies);
-
 
             }
         }
