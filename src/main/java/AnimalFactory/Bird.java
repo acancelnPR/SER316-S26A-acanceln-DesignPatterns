@@ -11,7 +11,7 @@ public class Bird extends Animal{
      */
     @Override
     public void sadAction() {
-        System.out.printf("%s the %s is in the %s and \"chirps\" sadly.\n",
+        System.out.printf("%s the %s is in the %s state and \"chirps\" sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -20,7 +20,7 @@ public class Bird extends Animal{
      */
     @Override
     public void specialAction() {
-        System.out.printf("%s the %s is in the %s and flaps its wings.\n",
+        System.out.printf("%s the %s is in the %s state and flaps its wings.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -29,7 +29,7 @@ public class Bird extends Animal{
      */
     @Override
     public void happyAction() {
-        System.out.printf("%s the %s is in the %s and \"chirps\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"chirps\" Excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 }

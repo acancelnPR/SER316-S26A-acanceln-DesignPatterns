@@ -11,7 +11,7 @@ public class Dog extends Animal{
      */
     @Override
     public void sadAction() {
-        System.out.printf("%s the %s is in the %s and \"Ruffs\" sadly.\n",
+        System.out.printf("%s the %s is in the %s state and \"Ruffs\" sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -20,7 +20,7 @@ public class Dog extends Animal{
      */
     @Override
     public void specialAction() {
-        System.out.printf("%s the %s is in the %s and is wagging its tail.\n",
+        System.out.printf("%s the %s is in the %s state and is wagging its tail.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -29,7 +29,7 @@ public class Dog extends Animal{
      */
     @Override
     public void happyAction() {
-        System.out.printf("%s the %s is in the %s and \"Woofs\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"Woofs\" Excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 }

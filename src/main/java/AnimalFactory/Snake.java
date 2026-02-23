@@ -11,7 +11,7 @@ public class Snake extends Animal{
      */
     @Override
     public void sadAction() {
-        System.out.printf("%s the %s is in the %s and \"hisses\".\n",
+        System.out.printf("%s the %s is in the %s state and \"hisses\".\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -20,7 +20,7 @@ public class Snake extends Animal{
      */
     @Override
     public void specialAction() {
-        System.out.printf("%s the %s is in the %s and slithers around curiously.\n",
+        System.out.printf("%s the %s is in the %s state and slithers around curiously.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -29,7 +29,7 @@ public class Snake extends Animal{
      */
     @Override
     public void happyAction() {
-        System.out.printf("%s the %s is in the %s and \"scuttles\" excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"scuttles\" excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 }

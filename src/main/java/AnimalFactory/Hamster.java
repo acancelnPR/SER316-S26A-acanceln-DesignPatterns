@@ -11,7 +11,7 @@ public class Hamster extends Animal{
      */
     @Override
     public void sadAction() {
-        System.out.printf("%s the %s is in the %s and does hamster noises sadly.\n",
+        System.out.printf("%s the %s is in the %s state and does hamster noises sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -20,7 +20,7 @@ public class Hamster extends Animal{
      */
     @Override
     public void specialAction() {
-        System.out.printf("%s the %s is in the %s and wags its hamster butt.\n",
+        System.out.printf("%s the %s is in the %s state and wags its hamster butt.\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 
@@ -29,7 +29,7 @@ public class Hamster extends Animal{
      */
     @Override
     public void happyAction() {
-        System.out.printf("%s the %s is in the %s and does hamster noises happily!\n",
+        System.out.printf("%s the %s is in the %s state and does hamster noises happily!\n",
                 getName(), getSpecies().name(), getShelterState());
     }
 }
