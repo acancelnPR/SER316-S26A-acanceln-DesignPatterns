@@ -1,9 +1,8 @@
 package StaffFactory;
 
 import AnimalFactory.Animal;
-import AnimalFactory.IntakeState;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 //TODO create staff factory
 abstract public class Staff {
@@ -14,7 +13,7 @@ abstract public class Staff {
     private final StaffRole ROLE;
 
     private final int ANIMALCAPACITY = 10; // Max assigned animal capacity for any staff member.
-    private HashMap<Integer, Animal> assignedAnimals;
+    private ArrayList<Animal> assignedAnimals;
 
 
 
@@ -22,35 +21,44 @@ abstract public class Staff {
         ID = id;
         ROLE = role;
         this.name = name;
+        assignedAnimals = new ArrayList<>(ANIMALCAPACITY);
     }
 
     //GETTERS
     public int getID() {
         return ID;
     }
-
+    /// ghet staff name
     public String getName() {
         return name;
     }
-
+    /// is staff available?
     public boolean isAvailable() {
         return available;
     }
-
+    /// get staff role
     public StaffRole getROLE() {
         return ROLE;
     }
-
+    /// get animal capacity for staff
     public int getANIMALCAPACITY() {
         return ANIMALCAPACITY;
     }
-
-    public HashMap<Integer, Animal> getAssignedAnimals() {
-        return new HashMap<>(assignedAnimals);
+    ///get the assigned animals in array list
+    public ArrayList<Animal> getAssignedAnimals() {
+        return new ArrayList<>(assignedAnimals);
     }
-
+    /// Get specific animal at index
+    public Animal getAnimal(int index){return assignedAnimals.get(index);}
+    /// get the current count of animals assigned
     public int getSizeOfAssignedAnimals() {
         return assignedAnimals.size();
+    }
+
+
+    /// Set availability
+    public void setAvailable(boolean val){
+        available = val;
     }
 
     /**assign animal to staff
@@ -61,26 +69,24 @@ abstract public class Staff {
         int size = getSizeOfAssignedAnimals();
 
         if (size <= ANIMALCAPACITY){
-            int key = animal.getID();
-
-            assignedAnimals.put(key, animal);
+            assignedAnimals.add(animal);
         }
         System.out.println("Animal Capacity is full. Remove animal to create space.");
     }
 
     /**
      * Remove Animal from the staff's map.
-     * @param id int
+     * @param index int
      * @return Animal or null if not found
      */
-    public Animal removeAnimal(int id){
-        Animal removedAnimal = assignedAnimals.get(id);
+    public Animal removeAnimal(int index){
+        Animal removedAnimal = assignedAnimals.get(index);
         if(removedAnimal == null) {
-            System.out.println("Could not find animal ID.");
+            System.out.println("Could not find animal at index.");
             return removedAnimal;
         }
 
-        assignedAnimals.remove(id);
+        assignedAnimals.remove(index);
 
         return removedAnimal;
     }
@@ -88,5 +94,5 @@ abstract public class Staff {
     /**
      * Each staff has a different action. Interact with animal and/or change their state.
      */
-    abstract void staffAction();
+    public abstract void staffAction(StaffManagement management);
 }

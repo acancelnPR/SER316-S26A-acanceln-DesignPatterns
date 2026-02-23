@@ -7,6 +7,15 @@ import AnimalFactory.HealthStatus;
  * Intake state: Animals in the Intake State have just arrived
  */
 public class IntakeState implements AnimalState{
+    Animal animal;
+    public IntakeState(Animal animal){
+        this.animal = animal;
+        String animalName = animal.getName();
+        String animalSpecies = animal.getSpecies().name();
+
+        System.out.printf("%s the %s has entered the shelter, so it is in the Intake state.\n",
+                animalName, animalSpecies);
+    }
 
     /// get state current state name
     @Override
