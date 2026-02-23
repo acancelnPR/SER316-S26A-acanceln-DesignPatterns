@@ -87,7 +87,7 @@ abstract public class Animal {
 
     /// Generic indifferent action
     public void indifferentAction(){
-        System.out.printf("%s the %s is in the %s and acts indifferent.\n",
+        System.out.printf("%s the %s is in the %s state and acts indifferent.\n",
                 name, species.name(), shelterState.stateName());
     }
 
