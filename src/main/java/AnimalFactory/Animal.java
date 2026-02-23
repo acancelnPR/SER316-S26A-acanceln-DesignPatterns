@@ -12,13 +12,14 @@ abstract public class Animal {
      private String name;
      private final AnimalSpecies species;
      private HealthStatus healthStatus;
-     private AnimalState shelterState;//TODO maybe I should have protected visibility? Revisit.
+     private AnimalState shelterState;
 
      public Animal(int id, int age, AnimalSpecies species, HealthStatus healthStatus) {
          ID = id;
          AGE = age;
          this.species = species;
          this.healthStatus = healthStatus;
+         shelterState = null;
      }
 
      public int getID() {
