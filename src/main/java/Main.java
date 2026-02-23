@@ -32,6 +32,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        final int WEEK = 7;
         //TODO(R1.a): create 5 animals w/ basic attributes
 
         setUp();
@@ -39,10 +40,14 @@ public class Main {
 
         //1-based index
         //Shelter Simulation Loop
-        for (day = 1; day <= 1; day++) {//TODO change limit to WEEK.
-            activeTechnician.staffAction(staffManagement);
-            activeVeterinarian.staffAction(staffManagement);
+        for (day = 1; day <= WEEK; day++) {
+            System.out.printf("\n///Pet Shelter Day %d\\\\\\.\n", day);
             activeCounselor.staffAction(staffManagement);
+            activeVeterinarian.staffAction(staffManagement);
+            activeTechnician.staffAction(staffManagement);
+
+            //Animal arrives to the shelter
+            activeTechnician.assignAnimal(createAnimal(day));
         }
     }
 
@@ -50,7 +55,7 @@ public class Main {
      * instantiates Staff variables
      * Creates the staring 5 Animals and assigns them to active technician.
      */
-    static void setUp(){
+    static void setUp() {
         activeTechnician = technicianFactory.createStaff();
         activeVeterinarian = veterinerianFactory.createStaff();
         activeCounselor = counselorFactory.createStaff();
@@ -61,13 +66,15 @@ public class Main {
     }
 
 
-    /**Helper method to select which factory to use when creating the animal the will "arrive" to the shelter based on the day.
+    /**Helper method to select which factory to use when
+     *  creating the animal the will "arrive" to the shelter based on the day.
      *
      * @param day
      * @return
      */
-    static Animal createAnimal(int day){
-        day = day % 7;
+    static Animal createAnimal(int day) {
+        final int moduloVal = 8;
+        day = day % moduloVal;
 
         final int MONDAY = 1;
         final int TUESDAY = 2;
@@ -77,9 +84,30 @@ public class Main {
         final int SATURDAY = 6;
         final int SUNDAY = 7;
 
+
+        //add newline to make it easier to read the console.
+        System.out.println();
         switch (day) {
             case (MONDAY) -> {
                 return dogFactory.createAnimal();
+            }
+            case (TUESDAY) -> {
+                return catFactory.createAnimal();
+            }
+            case (WEDNESDAY) -> {
+                return hamsterFactory.createAnimal();
+            }
+            case (THURSDAY) -> {
+                return fishFactory.createAnimal();
+            }
+            case (FRIDAY) -> {
+                return snakeFactory.createAnimal();
+            }
+            case (SATURDAY) -> {
+                return turtleFactory.createAnimal();
+            }
+            case (SUNDAY) -> {
+                return birdFactory.createAnimal();
             }
             default -> {
                 System.err.println("Expected a day of the week.");
@@ -90,11 +118,13 @@ public class Main {
 
     /// get day of the week or current interval of the simulation.
     /// @return int
-    public int getDay() {return day;}
+    public int getDay() {
+        return day;
+    }
 
 
-    String test_build(boolean val) {
-        if (val){
+    String testBuild(boolean val) {
+        if (val) {
             return "Hello World";
         }
         return "Bye World";

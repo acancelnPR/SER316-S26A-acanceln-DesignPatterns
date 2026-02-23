@@ -1,6 +1,6 @@
 package AnimalFactory;
 
-public class BirdFactory extends AnimalFactory{
+public class BirdFactory extends AnimalFactory {
 
     /**
      * Create object from the Animal class

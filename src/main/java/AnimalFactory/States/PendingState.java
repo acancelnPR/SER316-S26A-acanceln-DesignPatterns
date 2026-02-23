@@ -2,7 +2,7 @@ package AnimalFactory.States;
 
 import AnimalFactory.Animal;
 
-public class PendingState implements AnimalState{
+public class PendingState implements AnimalState {
 
 
     /// get state current state name
@@ -13,6 +13,7 @@ public class PendingState implements AnimalState{
 
     /**
      * animal does an action and then transitions to the next state.
+     *
      * @param animal
      */
     @Override

@@ -6,9 +6,14 @@ import AnimalFactory.HealthStatus;
 /**
  * Intake state: Animals in the Intake State have just arrived
  */
-public class IntakeState implements AnimalState{
+public class IntakeState implements AnimalState {
     Animal animal;
-    public IntakeState(Animal animal){
+
+    /** Create Intake state
+     *
+     * @param animal
+     */
+    public IntakeState(Animal animal) {
         this.animal = animal;
         String animalName = animal.getName();
         String animalSpecies = animal.getSpecies().name();
@@ -25,6 +30,7 @@ public class IntakeState implements AnimalState{
 
     /**
      * animal does an action and then transitions to the next state.
+     *
      * @param animal
      */
     @Override
@@ -32,7 +38,7 @@ public class IntakeState implements AnimalState{
         animal.setShelterState(new AvailableState());
 
         HealthStatus health = animal.getHealthStatus();
-        if (health.equals(HealthStatus.SICK)){
+        if (health.equals(HealthStatus.SICK)) {
             animal.sadAction();
         } else if (health == HealthStatus.HEALTHY) {
             animal.indifferentAction();

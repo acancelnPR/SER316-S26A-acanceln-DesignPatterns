@@ -1,7 +1,13 @@
 package AnimalFactory;
 
-public class Dog extends Animal{
-
+public class Dog extends Animal {
+    /** Creates dog object from animal class
+     *
+     * @param id
+     * @param age
+     * @param species
+     * @param healthStatus
+     */
     public Dog(int id, int age, AnimalSpecies species, HealthStatus healthStatus) {
         super(id, age, species, healthStatus);
     }

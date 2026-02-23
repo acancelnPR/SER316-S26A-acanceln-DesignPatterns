@@ -18,10 +18,10 @@ public class MainTest {
     public void testBuild(){
         String result;
 
-        result = main.test_build(true);
+        result = main.testBuild(true);
         assertEquals("Hello World", result);
 
-        result = main.test_build(false);
+        result = main.testBuild(false);
         assertEquals("Bye World", result);
     }
 }

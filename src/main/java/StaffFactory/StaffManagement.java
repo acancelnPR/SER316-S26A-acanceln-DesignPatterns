@@ -14,18 +14,22 @@ public class StaffManagement {
 
     /**
      * sets active staff
+     *
      * @param veterinarian
      * @param counselor
      * @param technician
      */
-    public StaffManagement(Staff technician, Staff veterinarian, Staff counselor){
+    public StaffManagement(Staff technician, Staff veterinarian, Staff counselor) {
         activeTechnician = technician;
         activeVeterinarian = veterinarian;
         activeCounselor = counselor;
     }
 
-    /// Adds staff to staff list
-    public void addStaff(Staff staff){
+    /** Adds staff to staff list
+     *
+     * @param staff
+     */
+    public void addStaff(Staff staff) {
         staffList.add(staff);
     }
 
@@ -61,10 +65,11 @@ public class StaffManagement {
 
     /**
      * Helps switch shifts, when a staff member is off.
+     *
      * @param retiring leaves the shelter.
      * @param starting returns to the shelter. set as active staff.
      */
-    public void changeShift(Staff retiring, Staff starting){
+    public void changeShift(Staff retiring, Staff starting) {
         int size = retiring.getSizeOfAssignedAnimals();
 
         System.out.printf("%s the current %s is taking off work an transfers his animals to %s the %s.\n",

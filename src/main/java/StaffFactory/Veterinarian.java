@@ -8,11 +8,16 @@ import AnimalFactory.HealthStatus;
  * Job: Takes animals that need treatment. after the animal is cured sends them to the counselor.
  * Does not change animal state, just hands them to counselor
  */
-public class Veterinarian extends Staff{
+public class Veterinarian extends Staff {
     private String name;
     private String role;
 
-
+    /** Create Veterinarian from Staff class
+     *
+     * @param id
+     * @param role
+     * @param name
+     */
     public Veterinarian(int id, StaffRole role, String name) {
         super(id, role, name);
         this.name = name;
@@ -31,7 +36,7 @@ public class Veterinarian extends Staff{
         Staff counselor = management.getActiveCounselor();
 
         System.out.println("\n//////////Veterinarian Working//////////\n");
-        if (size == 0){
+        if (size == 0) {
             System.out.println("Veterinarian does not have any animals to work with. Shift ends early.\n");
             return;
         }
@@ -44,16 +49,17 @@ public class Veterinarian extends Staff{
             String animalSpecies = animal.getSpecies().name();
 
             if (animalHealth.equals(HealthStatus.SICK)) {
-                animal.setHealthStatus(HealthStatus.HEALTHY);
+                System.out.printf("%s, the %s treats the animal %s the %s and assigns them to the Counselor on duty .\n"
+                        , name, role, animalName, animalSpecies);
 
-                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.\n", name, role, animalName, animalSpecies);
+                animal.setHealthStatus(HealthStatus.HEALTHY);
                 counselor.assignAnimal(animal);
 
                 this.removeAnimal(i);
-            }
-            else {
+            } else {
 
-                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.\n", name, role, animalName, animalSpecies);
+                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.\n",
+                        name, role, animalName, animalSpecies);
                 counselor.assignAnimal(animal);
 
                 this.removeAnimal(i);

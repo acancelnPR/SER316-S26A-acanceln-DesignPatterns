@@ -7,7 +7,10 @@ abstract public class StaffFactory {
     private static int idCounter = 0;
     private final int id;
 
-    public StaffFactory(){
+    /**
+     * create staff factory with unique ids
+     */
+    public StaffFactory() {
         //Risk is that if factory is called at the same time the value might not be unique.
         id = idCounter++;
     }
@@ -20,15 +23,18 @@ abstract public class StaffFactory {
     public abstract Staff createStaff();
 
     /// Get id
-    protected int getId(){return id;}
+    protected int getId() {
+        return id;
+    }
 
 
     /**
      * Get random name
+     *
      * @return
      */
-    protected String getRandomName(){
-        String[] names = {"Bob", "Lucy", "Robert", "Moon", "Legacy", "Rattle", "Pop", "Copper", "Jax", "Lux"};
+    protected String getRandomName() {
+        String[] names = {"Rob", "Lexy", "Ranier", "Hallow", "Legacy", "Maria", "Pop", "Destiny", "Jax", "Luis"};
         final int size = 10;
 
         final int MAX = size - 1;

@@ -7,11 +7,16 @@ import AnimalFactory.Animal;
  * Create a Counselor.
  * Job: Takes animals and guides them through the proper steps to process adoption.
  */
-public class Counselor extends Staff{
+public class Counselor extends Staff {
     private String name;
     private String role;
 
-
+    /** Create Counselor from Staff class
+     *
+     * @param id
+     * @param role
+     * @param name
+     */
     public Counselor(int id, StaffRole role, String name) {
         super(id, role, name);
         this.name = name;
@@ -28,10 +33,9 @@ public class Counselor extends Staff{
         String animalState;
 
 
-
         System.out.println("\n//////////Counselor Working//////////\n");
 
-        if (size == 0){
+        if (size == 0) {
             System.out.println("Counselor does not have any animals to work with. Shift ends early.\n");
             return;
         }
@@ -44,17 +48,19 @@ public class Counselor extends Staff{
             String animalName = animal.getName();
             String animalSpecies = animal.getSpecies().name();
 
-            if (animalState.equals("Adoption")) {
+            if (animalState.equals("Adopted")) {
 
-                System.out.printf("%s, the %s finished the adoption process for %s the %s.\n", name, role, animalName, animalSpecies);
+                System.out.printf("%s, the %s finished the adoption process for %s the %s.\n",
+                        name, role, animalName, animalSpecies);
                 System.out.printf("%s the %s no longer in the shelter.", animalName, animalSpecies);
 
                 this.removeAnimal(i);
-            }
-            else {
+            } else {
+                System.out.printf("%s, the %s on duty guides %s the %s through the adoption process.\n",
+                        name, role, animalName, animalSpecies);
+
                 animal.nextShelterState();
 
-                System.out.printf("%s, the %s on duty guides %s the %s through the adoption process.\n", name, role, animalName, animalSpecies);
 
             }
         }

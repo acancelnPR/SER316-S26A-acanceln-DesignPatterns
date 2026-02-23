@@ -7,49 +7,66 @@ import java.util.ArrayList;
 //TODO create staff factory
 abstract public class Staff {
 
-    private final int ID;
+    private final int id;
     private String name;
     private boolean available; // staff availability
-    private final StaffRole ROLE;
+    private final StaffRole staffRole;
 
-    private final int ANIMALCAPACITY = 10; // Max assigned animal capacity for any staff member.
-    private ArrayList<Animal> assignedAnimals;
+    private final int animalCAPACITY = 10; // Max assigned animal capacity for any staff member.
+    protected ArrayList<Animal> assignedAnimals;
 
-
-
+    /** create new Staff
+     *
+     * @param id
+     * @param role
+     * @param name
+     */
     public Staff(int id, StaffRole role, String name) {
-        ID = id;
-        ROLE = role;
+        this.id = id;
+        staffRole = role;
         this.name = name;
-        assignedAnimals = new ArrayList<>(ANIMALCAPACITY);
+        assignedAnimals = new ArrayList<>(animalCAPACITY);
     }
 
     //GETTERS
     public int getID() {
-        return ID;
+        return id;
     }
-    /// ghet staff name
+
+    /// get staff name
     public String getName() {
         return name;
     }
+
     /// is staff available?
     public boolean isAvailable() {
         return available;
     }
+
     /// get staff role
     public StaffRole getROLE() {
-        return ROLE;
+        return staffRole;
     }
+
     /// get animal capacity for staff
     public int getANIMALCAPACITY() {
-        return ANIMALCAPACITY;
+        return animalCAPACITY;
     }
-    ///get the assigned animals in array list
+
+    /// get the assigned animals in array list
     public ArrayList<Animal> getAssignedAnimals() {
         return new ArrayList<>(assignedAnimals);
     }
-    /// Get specific animal at index
-    public Animal getAnimal(int index){return assignedAnimals.get(index);}
+
+    /** Get specific animal at index
+     *
+     * @param index
+     * @return
+     */
+    public Animal getAnimal(int index) {
+        return assignedAnimals.get(index);
+    }
+
     /// get the current count of animals assigned
     public int getSizeOfAssignedAnimals() {
         return assignedAnimals.size();
@@ -57,33 +74,36 @@ abstract public class Staff {
 
 
     /// Set availability
-    public void setAvailable(boolean val){
+    public void setAvailable(boolean val) {
         available = val;
     }
 
-    /**assign animal to staff
+    /**
+     * assign animal to staff
      *
      * @param animal
+     * @return
      */
-    public void assignAnimal(Animal animal){
+    public boolean assignAnimal(Animal animal) {
         int size = getSizeOfAssignedAnimals();
 
-        if (size <= ANIMALCAPACITY){
-            assignedAnimals.add(animal);
-        }
-        else{
+        if (size <= animalCAPACITY) {
+            return assignedAnimals.add(animal);
+        } else {
             System.out.println("Animal Capacity is full. Remove animal to create space.");
         }
+        return false;
     }
 
     /**
      * Remove Animal from the staff's map.
+     *
      * @param index int
      * @return Animal or null if not found
      */
-    public Animal removeAnimal(int index){
+    public Animal removeAnimal(int index) {
         Animal removedAnimal = assignedAnimals.get(index);
-        if(removedAnimal == null) {
+        if (removedAnimal == null) {
             System.out.println("Could not find animal at index.");
             return removedAnimal;
         }
