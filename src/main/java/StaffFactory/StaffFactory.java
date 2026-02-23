@@ -14,9 +14,10 @@ abstract public class StaffFactory {
 
     /**
      * Create object from the Staff class
+     *
      * @return Staff
      */
-    abstract Staff createStaff();
+    public abstract Staff createStaff();
 
     /// Get id
     protected int getId(){return id;}

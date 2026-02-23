@@ -8,7 +8,7 @@ public class CounselorFactory extends StaffFactory {
      * @return Staff
      */
     @Override
-    Staff createStaff() {
+    public Staff createStaff() {
         int id = getId();
         String name = getRandomName();
 
