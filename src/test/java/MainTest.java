@@ -8,14 +8,20 @@ public class MainTest {
 
     private Main main;
 
+    /**
+     * Initialize class variable
+     */
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         main = new Main();
     }
 
+    /**
+     * sample test
+     */
     @Test
     @DisplayName("Test Build- gradle was configured correctly")
-    public void testBuild(){
+    public void testBuild() {
         String result;
 
         result = main.testBuild(true);
