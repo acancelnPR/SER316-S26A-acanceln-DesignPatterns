@@ -19,7 +19,7 @@ public class Fish extends Animal {
      */
     @Override
     public boolean sadAction() {
-        System.out.printf("%s the %s is in the %s state and \"swims\" sadly.\n",
+        System.out.printf("%s the %s is in the %s state and \"swims\" sadly.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -31,7 +31,7 @@ public class Fish extends Animal {
      */
     @Override
     public boolean specialAction() {
-        System.out.printf("%s the %s is in the %s state and blows air bubbles.\n",
+        System.out.printf("%s the %s is in the %s state and blows air bubbles.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -43,7 +43,7 @@ public class Fish extends Animal {
      */
     @Override
     public boolean happyAction() {
-        System.out.printf("%s the %s is in the %s state and \"swims\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"swims\" Excitedly!%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }

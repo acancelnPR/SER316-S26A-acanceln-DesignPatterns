@@ -19,7 +19,7 @@ public class Dog extends Animal {
      */
     @Override
     public boolean sadAction() {
-        System.out.printf("%s the %s is in the %s state and \"Ruffs\" sadly.\n",
+        System.out.printf("%s the %s is in the %s state and \"Ruffs\" sadly.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -31,7 +31,7 @@ public class Dog extends Animal {
      */
     @Override
     public boolean specialAction() {
-        System.out.printf("%s the %s is in the %s state and is wagging its tail.\n",
+        System.out.printf("%s the %s is in the %s state and is wagging its tail.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -43,7 +43,7 @@ public class Dog extends Animal {
      */
     @Override
     public boolean happyAction() {
-        System.out.printf("%s the %s is in the %s state and \"Woofs\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"Woofs\" Excitedly!%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }

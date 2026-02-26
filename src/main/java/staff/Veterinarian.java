@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 import animalfactory.Animal;
 import animalfactory.HealthStatus;
@@ -49,7 +49,7 @@ public class Veterinarian extends Staff {
             String animalSpecies = animal.getSpecies().name();
 
             if (animalHealth.equals(HealthStatus.SICK)) {
-                System.out.printf("%s, the %s treats the animal %s the %s and assigns them to the Counselor on duty .\n"
+                System.out.printf("%s, the %s treats the animal %s the %s and assigns them to the Counselor on duty .%n"
                         , name, role, animalName, animalSpecies);
 
                 animal.setHealthStatus(HealthStatus.HEALTHY);
@@ -58,7 +58,7 @@ public class Veterinarian extends Staff {
                 this.removeAnimal(i);
             } else {
 
-                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.\n",
+                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.%n",
                         name, role, animalName, animalSpecies);
                 counselor.assignAnimal(animal);
 

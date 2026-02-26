@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class StaffManagement {
 
-    private ArrayList<Staff> staffList;
+
     private Staff activeVeterinarian;
     private Staff activeCounselor;
     private Staff activeTechnician;
@@ -23,14 +23,6 @@ public class StaffManagement {
         activeTechnician = technician;
         activeVeterinarian = veterinarian;
         activeCounselor = counselor;
-    }
-
-    /** Adds staff to staff list
-     *
-     * @param staff
-     */
-    public void addStaff(Staff staff) {
-        staffList.add(staff);
     }
 
     /// get active technician
@@ -72,7 +64,7 @@ public class StaffManagement {
     public void changeShift(Staff retiring, Staff starting) {
         int size = retiring.getSizeOfAssignedAnimals();
 
-        System.out.printf("%s the current %s is taking off work an transfers his animals to %s the %s.\n\n",
+        System.out.printf("%s the current %s is taking off work an transfers his animals to %s the %s.%n%n",
                 retiring.getName(), retiring.getROLE().name(), starting.getName(), starting.getROLE().name());
 
         for (int i = size - 1; i >= 0; i--) {

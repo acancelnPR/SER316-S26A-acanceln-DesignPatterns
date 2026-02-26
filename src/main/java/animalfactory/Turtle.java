@@ -19,7 +19,7 @@ public class Turtle extends Animal {
      */
     @Override
     public boolean sadAction() {
-        System.out.printf("%s the %s is in the %s state and does \"turtle\" stuff sadly.\n",
+        System.out.printf("%s the %s is in the %s state and does \"turtle\" stuff sadly.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -31,7 +31,7 @@ public class Turtle extends Animal {
      */
     @Override
     public boolean specialAction() {
-        System.out.printf("%s the %s is in the %s state and hides its limbs inside the shell.\n",
+        System.out.printf("%s the %s is in the %s state and hides its limbs inside the shell.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -43,7 +43,7 @@ public class Turtle extends Animal {
      */
     @Override
     public boolean happyAction() {
-        System.out.printf("%s the %s is in the %s state and does \"turtle\" stuff Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and does \"turtle\" stuff Excitedly!%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }

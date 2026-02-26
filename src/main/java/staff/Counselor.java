@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 import animalfactory.Animal;
 
@@ -50,13 +50,13 @@ public class Counselor extends Staff {
 
             if (animalState.equals("Adopted")) {
 
-                System.out.printf("%s, the %s finished the adoption process for %s the %s.\n",
+                System.out.printf("%s, the %s finished the adoption process for %s the %s.%n",
                         name, role, animalName, animalSpecies);
-                System.out.printf("%s the %s no longer in the shelter.\n", animalName, animalSpecies);
+                System.out.printf("%s the %s no longer in the shelter.%n", animalName, animalSpecies);
 
                 this.removeAnimal(i);
             } else {
-                System.out.printf("%s, the %s on duty guides %s the %s through the adoption process.\n",
+                System.out.printf("%s, the %s on duty guides %s the %s through the adoption process.%n",
                         name, role, animalName, animalSpecies);
 
                 animal.nextShelterState();

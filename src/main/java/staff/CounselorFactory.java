@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 public class CounselorFactory extends StaffFactory {
 

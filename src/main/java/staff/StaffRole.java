@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 /// Veterinarian takes care of sick animals and return them to "available" state once cured.<p>
 /// Counselor takes care of animals in the "Pending" state. Counselor works with adopters.<p>

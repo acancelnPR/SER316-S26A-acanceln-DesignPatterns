@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 import animalfactory.Animal;
 

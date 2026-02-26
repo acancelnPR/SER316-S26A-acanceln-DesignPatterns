@@ -18,7 +18,7 @@ public class IntakeState implements AnimalState {
         String animalName = animal.getName();
         String animalSpecies = animal.getSpecies().name();
 
-        System.out.printf("%s the %s has entered the shelter, so it is in the Intake state.\n",
+        System.out.printf("%s the %s has entered the shelter, so it is in the Intake state.%n",
                 animalName, animalSpecies);
     }
 

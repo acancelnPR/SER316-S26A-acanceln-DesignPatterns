@@ -19,7 +19,7 @@ public class Cat extends Animal {
      */
     @Override
     public boolean sadAction() {
-        System.out.printf("%s the %s is in the %s state and \"Purrs\" sadly.\n",
+        System.out.printf("%s the %s is in the %s state and \"Purrs\" sadly.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -31,7 +31,7 @@ public class Cat extends Animal {
      */
     @Override
     public boolean specialAction() {
-        System.out.printf("%s the %s is in the %s state and cleans its body with its tongue.\n",
+        System.out.printf("%s the %s is in the %s state and cleans its body with its tongue.%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }
@@ -43,7 +43,7 @@ public class Cat extends Animal {
      */
     @Override
     public boolean happyAction() {
-        System.out.printf("%s the %s is in the %s state and \"Meows\" Excitedly!\n",
+        System.out.printf("%s the %s is in the %s state and \"Meows\" Excitedly!%n",
                 getName(), getSpecies().name(), getShelterState());
         return true;
     }

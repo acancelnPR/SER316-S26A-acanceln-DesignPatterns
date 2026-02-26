@@ -1,5 +1,5 @@
 import animalfactory.*;
-import StaffFactory.*;
+import staff.*;
 
 
 public class Main {

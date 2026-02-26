@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 
 abstract public class StaffFactory {

@@ -1,4 +1,4 @@
-package StaffFactory;
+package staff;
 
 import animalfactory.Animal;
 import animalfactory.HealthStatus;
@@ -42,7 +42,7 @@ public class Technician extends Staff {
             assignedAnimals.add(animal);
             animal.setShelterState(new IntakeState(animal));
 
-            System.out.printf("%s, the %s has %s the %s in custody.\n", name, role, animalName, animalSpecies);
+            System.out.printf("%s, the %s has %s the %s in custody.%n", name, role, animalName, animalSpecies);
             return true;
         } else {
             System.out.println("Animal Capacity is full. Remove animal to create space.");
@@ -78,7 +78,7 @@ public class Technician extends Staff {
             String animalSpecies = animal.getSpecies().name();
 
             if (animalHealth.equals(HealthStatus.SICK)) {
-                System.out.printf("%s, the %s assigns the Veterinarian on duty %s the %s for treatment.\n",
+                System.out.printf("%s, the %s assigns the Veterinarian on duty %s the %s for treatment.%n",
                         name, role, animalName, animalSpecies);
 
                 animal.nextShelterState();
@@ -86,7 +86,7 @@ public class Technician extends Staff {
 
                 this.removeAnimal(i);
             } else {
-                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.\n",
+                System.out.printf("%s, the %s assigns the Counselor on duty %s the %s.%n",
                         name, role, animalName, animalSpecies);
 
                 animal.nextShelterState();
