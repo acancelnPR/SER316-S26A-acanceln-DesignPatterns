@@ -1,10 +1,11 @@
-import AnimalFactory.*;
+import animalfactory.*;
 import StaffFactory.*;
 
 
 public class Main {
 
-    static private final int WEEK = 7;
+    static private final int week = 7;
+    //number of day the simulation is running
     static private int day;
 
     //instantiate factories
@@ -17,13 +18,16 @@ public class Main {
     static AnimalFactory fishFactory = new FishFactory();
 
     static StaffFactory technicianFactory = new TechnicianFactory();
-    static StaffFactory veterinerianFactory = new VeterinerianFactory();
+    static StaffFactory veterinarianFactory = new VeterinerianFactory();
     static StaffFactory counselorFactory = new CounselorFactory();
 
     static StaffManagement staffManagement;
     static Staff activeTechnician;
     static Staff activeVeterinarian;
     static Staff activeCounselor;
+    static Staff backupTechnician;
+    static Staff backupVeterinarian;
+    static Staff backupCounselor;
 
 
     /**Runs a simulation about a pet shelter over a week.
@@ -32,16 +36,30 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        final int WEEK = 7;
-        //TODO(R1.a): create 5 animals w/ basic attributes
+        final int moduloWeek = 8;
+        final int wednesday = 3;
+        final int thursday = 4;
+        final int friday = 5;
 
         setUp();
 
 
         //1-based index
         //Shelter Simulation Loop
-        for (day = 1; day <= WEEK; day++) {
-            System.out.printf("\n///Pet Shelter Day %d\\\\\\.\n", day);
+        for (day = 1; day <= week; day++) {
+            System.out.printf("\n///Pet Shelter Day %d\\\\\\\n", day);
+
+            //on Wednesday Technicians change shifts.
+            if ((day % moduloWeek) == wednesday) {
+                staffManagement.changeShift(activeTechnician, backupTechnician);
+            } else if ((day % moduloWeek) == thursday) {
+                //on Thursdays veterinarians change shifts.
+                staffManagement.changeShift(activeVeterinarian, backupVeterinarian);
+            } else if ((day % moduloWeek) == friday) {
+                //on Fridays Counselors change shifts.
+                staffManagement.changeShift(activeCounselor, backupCounselor);
+            }
+
             activeCounselor.staffAction(staffManagement);
             activeVeterinarian.staffAction(staffManagement);
             activeTechnician.staffAction(staffManagement);
@@ -57,8 +75,11 @@ public class Main {
      */
     static void setUp() {
         activeTechnician = technicianFactory.createStaff();
-        activeVeterinarian = veterinerianFactory.createStaff();
+        activeVeterinarian = veterinarianFactory.createStaff();
         activeCounselor = counselorFactory.createStaff();
+        backupTechnician = technicianFactory.createStaff();
+        backupVeterinarian = veterinarianFactory.createStaff();
+        backupCounselor = counselorFactory.createStaff();
 
         staffManagement = new StaffManagement(activeTechnician, activeVeterinarian, activeCounselor);
 
@@ -73,21 +94,22 @@ public class Main {
      * @return
      */
     static Animal createAnimal(int day) {
-        final int moduloVal = 8;
-        day = day % moduloVal;
+        final int moduloWeek = 7;
+        final int dayOfTheWeek = day % moduloWeek;
+        System.out.println();
 
-        final int MONDAY = 1;
-        final int TUESDAY = 2;
-        final int WEDNESDAY = 3;
-        final int THURSDAY = 4;
-        final int FRIDAY = 5;
-        final int SATURDAY = 6;
-        final int SUNDAY = 7;
+        final int MONDAY = 0;
+        final int TUESDAY = 1;
+        final int WEDNESDAY = 2;
+        final int THURSDAY = 3;
+        final int FRIDAY = 4;
+        final int SATURDAY = 5;
+        final int SUNDAY = 6;
 
 
         //add newline to make it easier to read the console.
         System.out.println();
-        switch (day) {
+        switch (dayOfTheWeek) {
             case (MONDAY) -> {
                 return dogFactory.createAnimal();
             }

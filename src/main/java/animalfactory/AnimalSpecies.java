@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 /**
  * List of Animal species: DOG, CAT, BIRD, SNAKE, HAMSTER, FISH, TURTLE

@@ -72,7 +72,7 @@ public class StaffManagement {
     public void changeShift(Staff retiring, Staff starting) {
         int size = retiring.getSizeOfAssignedAnimals();
 
-        System.out.printf("%s the current %s is taking off work an transfers his animals to %s the %s.\n",
+        System.out.printf("%s the current %s is taking off work an transfers his animals to %s the %s.\n\n",
                 retiring.getName(), retiring.getROLE().name(), starting.getName(), starting.getROLE().name());
 
         for (int i = size - 1; i >= 0; i--) {

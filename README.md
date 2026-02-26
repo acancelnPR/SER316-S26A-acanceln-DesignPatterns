@@ -92,3 +92,5 @@ _What is the best way to start this?_
 
 _Shown a sample usage of factory, strategy, state, builder, adapter patterns._
 
+_prompt: How can I test an output to the console?_
+

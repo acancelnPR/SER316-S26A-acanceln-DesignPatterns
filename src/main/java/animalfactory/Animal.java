@@ -1,6 +1,6 @@
-package AnimalFactory;
+package animalfactory;
 
-import AnimalFactory.States.AnimalState;
+import animalfactory.states.AnimalState;
 
 /**
  * template for Animal object in the shelter simulation
@@ -95,8 +95,10 @@ abstract public class Animal {
 
     /**
      * perform sad action.
+     *
+     * @return true if successful at printing action to console
      */
-    public abstract void sadAction();
+    public abstract boolean sadAction();
 
     /** Generic indifferent action
      *
@@ -108,12 +110,16 @@ abstract public class Animal {
 
     /**
      * perform unique animal action.
+     *
+     * @return true if successful at printing action to console
      */
-    public abstract void specialAction();
+    public abstract boolean specialAction();
 
     /**
      * perform happy action.
+     *
+     * @return true if successful at printing action to console
      */
-    public abstract void happyAction();
+    public abstract boolean happyAction();
 
 }

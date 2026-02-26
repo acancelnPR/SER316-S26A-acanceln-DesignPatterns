@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 /**
  * animal factory, with essential methods subclasses must implement

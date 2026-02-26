@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 public class CatFactory extends AnimalFactory {
 

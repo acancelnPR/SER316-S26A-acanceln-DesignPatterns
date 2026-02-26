@@ -1,6 +1,6 @@
-package AnimalFactory;
+package animalfactory;
 
-public class FishFactory extends AnimalFactory {
+public class SnakeFactory extends AnimalFactory {
 
     /**
      * Create object from the Animal class
@@ -12,9 +12,9 @@ public class FishFactory extends AnimalFactory {
         int id = getId();
         int age = getAge();
         HealthStatus health = getHealthStatus();
-        AnimalSpecies species = AnimalSpecies.FISH;
+        AnimalSpecies species = AnimalSpecies.SNAKE;
 
-        Animal animal = new Fish(id, age, species, health);
+        Animal animal = new Snake(id, age, species, health);
 
         //set default name
         animal.setName(getRandomName());

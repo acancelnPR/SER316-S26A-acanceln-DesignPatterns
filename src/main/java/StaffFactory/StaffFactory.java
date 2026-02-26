@@ -34,7 +34,7 @@ abstract public class StaffFactory {
      * @return
      */
     protected String getRandomName() {
-        String[] names = {"Rob", "Lexy", "Ranier", "Hallow", "Legacy", "Maria", "Pop", "Destiny", "Jax", "Luis"};
+        String[] names = {"Rob", "Lexy", "Ranier", "Hallow", "Legacy", "Maria", "Maria", "Destiny", "Jax", "Luis"};
         final int size = 10;
 
         final int MAX = size - 1;

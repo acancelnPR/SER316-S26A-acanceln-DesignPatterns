@@ -1,8 +1,8 @@
 package StaffFactory;
 
-import AnimalFactory.Animal;
-import AnimalFactory.HealthStatus;
-import AnimalFactory.States.IntakeState;
+import animalfactory.Animal;
+import animalfactory.HealthStatus;
+import animalfactory.states.IntakeState;
 
 /**
  * Create a technician.

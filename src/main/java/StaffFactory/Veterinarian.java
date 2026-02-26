@@ -1,7 +1,7 @@
 package StaffFactory;
 
-import AnimalFactory.Animal;
-import AnimalFactory.HealthStatus;
+import animalfactory.Animal;
+import animalfactory.HealthStatus;
 
 /**
  * Create a Veterinarian.

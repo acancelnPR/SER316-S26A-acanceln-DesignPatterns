@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 public class Snake extends Animal {
     /** Creates snake object from animal class
@@ -14,28 +14,37 @@ public class Snake extends Animal {
 
     /**
      * perform sad action.
+     *
+     * @return
      */
     @Override
-    public void sadAction() {
+    public boolean sadAction() {
         System.out.printf("%s the %s is in the %s state and \"hisses\".\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 
     /**
      * perform unique animal action.
+     *
+     * @return
      */
     @Override
-    public void specialAction() {
+    public boolean specialAction() {
         System.out.printf("%s the %s is in the %s state and slithers around curiously.\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 
     /**
      * perform happy action.
+     *
+     * @return
      */
     @Override
-    public void happyAction() {
+    public boolean happyAction() {
         System.out.printf("%s the %s is in the %s state and \"scuttles\" excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 }

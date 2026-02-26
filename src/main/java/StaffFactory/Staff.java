@@ -1,6 +1,6 @@
 package StaffFactory;
 
-import AnimalFactory.Animal;
+import animalfactory.Animal;
 
 import java.util.ArrayList;
 

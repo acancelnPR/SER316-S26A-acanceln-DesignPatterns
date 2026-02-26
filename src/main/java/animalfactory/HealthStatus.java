@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 /**
  * Health status: HEALTHY, SICK

@@ -1,6 +1,6 @@
-package AnimalFactory.States;
+package animalfactory.states;
 
-import AnimalFactory.Animal;
+import animalfactory.Animal;
 
 /// Common actions for the state the animal is in.
 public interface AnimalState {

@@ -1,6 +1,6 @@
 package StaffFactory;
 
-import AnimalFactory.Animal;
+import animalfactory.Animal;
 
 
 /**
@@ -52,7 +52,7 @@ public class Counselor extends Staff {
 
                 System.out.printf("%s, the %s finished the adoption process for %s the %s.\n",
                         name, role, animalName, animalSpecies);
-                System.out.printf("%s the %s no longer in the shelter.", animalName, animalSpecies);
+                System.out.printf("%s the %s no longer in the shelter.\n", animalName, animalSpecies);
 
                 this.removeAnimal(i);
             } else {

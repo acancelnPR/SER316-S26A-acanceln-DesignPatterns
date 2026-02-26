@@ -1,4 +1,4 @@
-package AnimalFactory;
+package animalfactory;
 
 public class Fish extends Animal {
     /** Creates fish object from animal class
@@ -14,28 +14,37 @@ public class Fish extends Animal {
 
     /**
      * perform sad action.
+     *
+     * @return
      */
     @Override
-    public void sadAction() {
+    public boolean sadAction() {
         System.out.printf("%s the %s is in the %s state and \"swims\" sadly.\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 
     /**
      * perform unique animal action.
+     *
+     * @return
      */
     @Override
-    public void specialAction() {
+    public boolean specialAction() {
         System.out.printf("%s the %s is in the %s state and blows air bubbles.\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 
     /**
      * perform happy action.
+     *
+     * @return
      */
     @Override
-    public void happyAction() {
+    public boolean happyAction() {
         System.out.printf("%s the %s is in the %s state and \"swims\" Excitedly!\n",
                 getName(), getSpecies().name(), getShelterState());
+        return true;
     }
 }

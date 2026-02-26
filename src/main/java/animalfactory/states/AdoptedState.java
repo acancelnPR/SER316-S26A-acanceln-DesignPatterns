@@ -1,6 +1,6 @@
-package AnimalFactory.States;
+package animalfactory.states;
 
-import AnimalFactory.Animal;
+import animalfactory.Animal;
 
 /**
  * Adopted State: In this state the animal was adopted and is no longer part of the shelter.
