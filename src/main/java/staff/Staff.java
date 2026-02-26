@@ -4,7 +4,6 @@ import animalfactory.Animal;
 
 import java.util.ArrayList;
 
-//TODO create staff factory
 abstract public class Staff {
 
     private final int id;

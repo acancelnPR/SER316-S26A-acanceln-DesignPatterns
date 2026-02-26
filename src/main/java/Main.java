@@ -47,17 +47,20 @@ public class Main {
         //1-based index
         //Shelter Simulation Loop
         for (day = 1; day <= week; day++) {
-            System.out.printf("\n///Pet Shelter Day %d\\\\\\\n", day);
+            System.out.printf("%n///Pet Shelter Day %d\\\\\\%n", day);
 
             //on Wednesday Technicians change shifts.
             if ((day % moduloWeek) == wednesday) {
                 staffManagement.changeShift(activeTechnician, backupTechnician);
+                activeTechnician = staffManagement.getActiveTechnician();
             } else if ((day % moduloWeek) == thursday) {
                 //on Thursdays veterinarians change shifts.
                 staffManagement.changeShift(activeVeterinarian, backupVeterinarian);
+                activeVeterinarian = staffManagement.getActiveVeterinarian();
             } else if ((day % moduloWeek) == friday) {
                 //on Fridays Counselors change shifts.
                 staffManagement.changeShift(activeCounselor, backupCounselor);
+                activeCounselor = staffManagement.getActiveCounselor();
             }
 
             activeCounselor.staffAction(staffManagement);
@@ -65,6 +68,7 @@ public class Main {
             activeTechnician.staffAction(staffManagement);
 
             //Animal arrives to the shelter
+            System.out.print("\n//Animal Arrives to the Shelter\\\\");
             activeTechnician.assignAnimal(createAnimal(day));
         }
     }
@@ -83,7 +87,12 @@ public class Main {
 
         staffManagement = new StaffManagement(activeTechnician, activeVeterinarian, activeCounselor);
 
+        System.out.println("/// Starting Animals \\\\\\\n");
         activeTechnician.assignAnimal(dogFactory.createAnimal());
+        activeTechnician.assignAnimal(snakeFactory.createAnimal());
+        activeTechnician.assignAnimal(catFactory.createAnimal());
+        activeTechnician.assignAnimal(turtleFactory.createAnimal());
+        activeTechnician.assignAnimal(hamsterFactory.createAnimal());
     }
 
 

@@ -7,14 +7,13 @@ import animalfactory.HealthStatus;
  * Intake state: Animals in the Intake State have just arrived
  */
 public class IntakeState implements AnimalState {
-    Animal animal;
+
 
     /** Create Intake state
      *
      * @param animal
      */
     public IntakeState(Animal animal) {
-        this.animal = animal;
         String animalName = animal.getName();
         String animalSpecies = animal.getSpecies().name();
 

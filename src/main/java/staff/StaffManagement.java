@@ -75,5 +75,13 @@ public class StaffManagement {
         retiring.setAvailable(false);
         starting.setAvailable(true);
 
+        if (retiring.getROLE().equals(StaffRole.TECHNICIAN)) {
+            setActiveTechnician(starting);
+        } else if (retiring.getROLE().equals(StaffRole.COUNSELOR)) {
+            setActiveCounselor(starting);
+        } else if (retiring.getROLE().equals(StaffRole.VETERINARIAN)) {
+            setActiveVeterinarian(starting);
+        }
+
     }
 }

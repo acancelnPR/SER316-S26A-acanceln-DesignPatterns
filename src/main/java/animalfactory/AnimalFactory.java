@@ -41,6 +41,10 @@ abstract public class AnimalFactory {
         return (int) (Math.random() * (MAX - MIN + 1) + MIN);
     }
 
+    /**
+     * get a random healthStatus
+     * @return
+     */
     protected HealthStatus getHealthStatus() {
         final int MAX = 1;
         final int MIN = 0;
@@ -57,8 +61,9 @@ abstract public class AnimalFactory {
      * @return
      */
     protected String getRandomName() {
-        String[] names = {"Bob", "Lucy", "Robert", "Moon", "Legacy", "Rattle", "Pop", "Copper", "Jax", "Lux"};
-        final int size = 10;
+        String[] names = {"Bob", "Lucy", "Robert", "Moon", "Legacy", "Rattle", "Rubius", "Copper", "Jax", "Lux",
+                "Okie", "Dokie", "Brown Sugar", "Peanut", "Coco", "Woody"};
+        final int size = 16;
 
         final int MAX = size - 1;
         final int MIN = 0;
