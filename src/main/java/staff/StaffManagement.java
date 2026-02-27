@@ -1,6 +1,5 @@
 package staff;
 
-import java.util.ArrayList;
 
 /**
  * Manages active staff and manages shift changes

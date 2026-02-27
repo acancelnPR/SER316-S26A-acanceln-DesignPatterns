@@ -124,6 +124,10 @@ and select the appropriate action.
 
 My code coverage on Jacoco is 63%. (Did not exclude main and getters/setters)
 
+![Jacoco Coverage report](Jacoco.png)
+![Checkstyle SA](Checkstyle.png)
+![SpotBug Report](SpotBug.png)
+
 ### Design Evolution and Process:
 
 The biggest change was deciding I was going to implement requirement R2.b instead of R4.a. 
